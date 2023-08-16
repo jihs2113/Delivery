@@ -8,15 +8,18 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "test:eslint": "echo \"\\033[33mRunning eslint check\" &&  eslint .",
-    "test:tsc": "echo \"\\033[33mRunning typescript check\" && tsc"
+    "test:tsc": "echo \"\\033[33mRunning typescript check\" && tsc",
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "@babel/preset-typescript": "^7.22.5",
     "@react-navigation/native": "^6.1.7",
     "@react-navigation/stack": "^6.3.17",
+    "@react-navigation/tabs": "^0.0.0-alpha.12",
     "@reduxjs/toolkit": "^1.9.5",
     "@types/jest": "^29.5.3",
     "@types/react-test-renderer": "^18.0.0",
+    "axios": "^1.4.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^29.6.2",
     "babel-preset-expo": "^9.5.1",
@@ -25,6 +28,7 @@
     "eslint-config-universe": "^12.0.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "expo": "~49.0.7",
+    "expo-location": "^16.1.0",
     "expo-status-bar": "~1.6.0",
     "jest-expo": "^49.0.0",
     "prettier": "^3.0.2",
