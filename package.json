@@ -6,18 +6,59 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "test:eslint": "echo \"\\033[33mRunning eslint check\" &&  eslint .",
+    "test:tsc": "echo \"\\033[33mRunning typescript check\" && tsc"
   },
   "dependencies": {
+    "@babel/preset-typescript": "^7.22.5",
+    "@react-navigation/native": "^6.1.7",
+    "@react-navigation/stack": "^6.3.17",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@types/jest": "^29.5.3",
+    "@types/react-test-renderer": "^18.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^29.6.2",
+    "babel-preset-expo": "^9.5.1",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-universe": "^12.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "expo": "~49.0.7",
     "expo-status-bar": "~1.6.0",
+    "jest-expo": "^49.0.0",
+    "prettier": "^3.0.2",
     "react": "18.2.0",
-    "react-native": "0.72.3"
+    "react-native": "0.72.3",
+    "react-native-gesture-handler": "^2.12.1",
+    "react-native-paper": "^5.10.1",
+    "react-redux": "^8.1.2",
+    "tslint-config-prettier": "^1.18.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
+    "@types/expo": "^33.0.1",
+    "@types/expo__vector-icons": "^10.0.0",
     "@types/react": "~18.0.14",
+    "@types/react-native": "^0.72.2",
     "typescript": "^5.1.3"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "cache": false,
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "ts",
+      "tsx"
+    ],
+    "testMatch": [
+      "**/*.test.ts?(x)"
+    ],
+    "transform": {
+      "^.+\\.(js|jsx|ts|tsx)$": "babel-jest"
+    }
   },
   "private": true
 }
